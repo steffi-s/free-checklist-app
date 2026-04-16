@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'checklist_widget.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -48,23 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: const Center(
-        child: Card(
-          elevation: 4, // light drop shadow
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: Colors.black, width: 2),
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-          ),
-          // Card has a single child: a Padding that contains the Text
-          child: Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Text(
-              'Welcome to Free Checklist App!',
-              style: TextStyle(fontSize: 18), // medium size
-            ),
-          ),
-        ),
-      ),
+      body: const ChecklistWidget(),
     );
   }
 }
