@@ -46,8 +46,8 @@ class ChecklistWidget extends StatefulWidget {
 
 class _ChecklistWidgetState extends State<ChecklistWidget> {
   final List<Checklist> _checklists = [shopping, drugStore];
-  List<ChecklistItem> _shoppingItems = [shoppingItem1, shoppingItem2];
-  List<ChecklistItem> _drugStoreItems = [drugStoreItem1, drugStoreItem2];
+  final List<ChecklistItem> _shoppingItems = [shoppingItem1, shoppingItem2];
+  final List<ChecklistItem> _drugStoreItems = [drugStoreItem1, drugStoreItem2];
 
   void _onReorder(int oldIndex, int newIndex) {
     setState(() {
