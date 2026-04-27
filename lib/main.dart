@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'checklist_widget.dart';
+import 'widgets/reorderable_checklist_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Free Checklist App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
@@ -22,16 +23,11 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: const ChecklistWidget(),
+      body: ReorderableChecklistView(),
     );
   }
 }
